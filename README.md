@@ -29,7 +29,9 @@ VOC2012/
 --ImageSets/                                                                                                       
 --JPEGImages/                                                                                                       
 --SegmentationClass/                                                                                                       
---SegmentationClassAug/                                                                                                       
+--SegmentationClassAug/  
+----trainaug.txt                                                                                                       
+----val.txt                                                                                                       
   
 and make sure to add trainaug.txt to your "ImageSets/Segmentation/trainaug.txt"
 
