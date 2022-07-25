@@ -1,7 +1,7 @@
 # ConvCRFs-training
 The code is a realization of training code of ConvCRFs
 
-The file convcrf.py is modified from [https://github.com/MarvinTeichmann/ConvCRF](https://github.com/MarvinTeichmann/ConvCRF)
+The file convcrf.py is modified from [https://github.com/MarvinTeichmann/ConvCRF](https://github.com/MarvinTeichmann/ConvCRF), and part of training codes are modified from the kaggle notebook [https://www.kaggle.com/code/jokerak/fcn-voc](https://www.kaggle.com/code/jokerak/fcn-voc)
 
 ## Realization
 
