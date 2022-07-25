@@ -19,3 +19,16 @@ Besides, I also tried to add some feature vectors into message passing function 
 | paper    | +C (11) |    94.01      |  72.30   |
 | ours    | +C (7) | 93.51    |  71.85    |
 | ours    | +C + F | 93.52    |  71.92    |
+
+### Folder structure
+
+To train your own SBD dataset or Pascal VOC dataset, the folder structure are forced to be
+
+VOC2012/
+  Annotations/
+  ImageSets/
+  JPEGImages/
+  SegmentationClass/
+  SegmentationClassAug/
+  
+and make sure to add trainaug.txt to your "ImageSets/Segmentation/trainaug.txt"
