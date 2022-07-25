@@ -25,15 +25,10 @@ Besides, I also tried to add some feature vectors into message passing function 
 To train your own SBD dataset or Pascal VOC dataset, the folder structure are forced to be
 
 VOC2012/
-
-  Annotations/
-  
-  ImageSets/
-  
-  JPEGImages/
-  
-  SegmentationClass/
-  
-  SegmentationClassAug/
+--Annotations/
+--ImageSets/
+--JPEGImages/
+--SegmentationClass/
+--SegmentationClassAug/
   
 and make sure to add trainaug.txt to your "ImageSets/Segmentation/trainaug.txt"
