@@ -205,8 +205,5 @@ def main(args):
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))
     print("training time {}".format(total_time_str))
 
-if not os.path.exists("/content/drive/MyDrive/save_weights"):
-    pass
-
 if __name__ == '__main__':
     main(args)
