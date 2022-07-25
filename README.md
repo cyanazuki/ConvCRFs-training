@@ -38,3 +38,9 @@ and make sure to add trainaug.txt to your "ImageSets/Segmentation/trainaug.txt"
 ### Custom Dataset
 
 If your are interesting in training your own dataset, just to modify the dataset.py file and the training configuration. 
+
+### Disscussion
+
+- We found that the more feature vectors we added or increased the filter size, the more mIoU dropped and didn't recover
+- The mIoU value of jointly end-to-end training is less than freeze unary parameters.
+
