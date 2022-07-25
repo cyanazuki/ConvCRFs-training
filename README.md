@@ -32,3 +32,7 @@ VOC2012/
 --SegmentationClassAug/                                                                                                       
   
 and make sure to add trainaug.txt to your "ImageSets/Segmentation/trainaug.txt"
+
+### Custom Dataset
+
+If your are interesting in training your own dataset, just to modify the dataset.py file and the training configuration. 
