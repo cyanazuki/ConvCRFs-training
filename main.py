@@ -18,10 +18,7 @@ from dataset import VOCSegmentation, VOCSegmentationVal
 import yaml
 
 def parse_args():
-    """
-    这是训练参数
-    :return:
-    """
+
     parser = argparse.ArgumentParser(description="pytorch fcn training")
 
     with open('config.yml', 'r') as f:
