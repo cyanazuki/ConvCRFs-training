@@ -44,3 +44,8 @@ If your are interesting in training your own dataset, just to modify the dataset
 - We found that the more feature vectors we added or increased the filter size, the more mIoU dropped and didn't recover
 - The mIoU value of jointly end-to-end training is less than freeze unary parameters.
 
+### Usage
+
+```python
+python main.py
+```
