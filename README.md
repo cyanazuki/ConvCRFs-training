@@ -12,7 +12,7 @@ I tried to train unary (fcn-resent101) using the same config as the paper, and h
 | paper    |  200 |    91.84      |  71.23   |
 | ours    | 25+ft | 93.33    |  71.00    |
 
-Besides, I also tried to add some feature vectors into message passing function (+C means choose conv1x1 as the compatibility transformation and +F means add unary output as the feature vector)
+Besides, I also tried to add some feature vectors into message passing function (+C means choose conv1x1 as the compatibility transformation and +F means add unary output as the feature vector), the origin paper say that they using 11x11 filter size, and we are using 7x7 filter size
 
 |  CRFs   | method |  Global ACC |  mIoU   |
 | --- | -------- | -------- | --- |
