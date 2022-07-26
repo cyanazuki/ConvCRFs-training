@@ -46,6 +46,6 @@ If your are interesting in training your own dataset, just to modify the dataset
 
 ### Usage
 
-```python
+```conda
 python main.py
 ```
