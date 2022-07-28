@@ -59,6 +59,7 @@ train_config:
     # In the origin paper, they conclude that CRFs parameters get the best result when CRFs parameters are trai-
     # ned with the 200 held out imgaes, which means that the number of images will be held out from your traini-
     # ng
+    
     train_with_held_out: True
     # The parameter is to decided whether to train with held out images or not. Note that we only set the param-
     # eter to True, when we are updating the CRFs parameters
