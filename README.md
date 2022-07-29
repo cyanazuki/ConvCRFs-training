@@ -26,12 +26,14 @@ To train your own SBD dataset or Pascal VOC dataset, the folder structure are fo
 
 VOC2012/                                                                                                       
 --Annotations/                                                                                                       
---ImageSets/                                                                                                       
+--ImageSets/  
+----Segmentation/
+------trainaug.txt    
+------train.txt
+------val.txt   
 --JPEGImages/                                                                                                       
 --SegmentationClass/                                                                                                       
---SegmentationClassAug/  
-----trainaug.txt                                                                                                       
-----val.txt                                                                                                       
+--SegmentationClassAug/                                                                                                      
   
 and make sure to add trainaug.txt to your "ImageSets/Segmentation/trainaug.txt"
 
