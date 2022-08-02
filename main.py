@@ -60,11 +60,9 @@ def parse_args():
     parser.add_argument("--amp", default=args['amp'], type=bool,
                         help="Use torch.cuda.amp for mixed precision training")
 
-    args = parser.parse_args(args=[])
+    args = parser.parse_args()
 
     return args
-
-args = parse_args()
 
 def main(args):
 
@@ -83,7 +81,7 @@ def main(args):
                                     transforms=train_transforms,
                                     held_out=args.held_out_images,
                                     train_with_held_out=args.train_with_held_out,
-                                    txt_name="train.txt")
+                                    txt_name="trainaug.txt")
     num_train_images = train_dataset.__len__()
 
     val_transforms = get_transform(train=False)
@@ -206,4 +204,5 @@ def main(args):
     print("training time {}".format(total_time_str))
 
 if __name__ == '__main__':
+    args = parse_args()
     main(args)
