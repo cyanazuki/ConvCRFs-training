@@ -51,3 +51,9 @@ If your are interesting in training your own dataset, just to modify the dataset
 ```conda
 python main.py
 ```
+
+We have provided another tutorial on Google Colab notebook --> [CRFs](https://github.com/DongDong-Zoez/pytorchAI/blob/main/CRFs/CRFs.ipynb)
+
+
+
+
