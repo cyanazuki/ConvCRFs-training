@@ -17,7 +17,7 @@ class VOCSegmentation(Dataset):
         image_dir = os.path.join(root, 'JPEGImages')
         mask_dir = os.path.join(root, 'SegmentationClassAug')
 
-        txt_path = os.path.join(root, f'ImageSets\Segmentation\{txt_name}')
+        txt_path = os.path.join(root, f'ImageSets/Segmentation/{txt_name}')
         assert os.path.exists(txt_path), "file '{}' does not exist.".format(txt_path)
 
         with open(os.path.join(txt_path), "r") as f:
@@ -82,7 +82,7 @@ class VOCSegmentationVal(Dataset):
         image_dir = os.path.join(root, 'JPEGImages')
         mask_dir = os.path.join(root, 'SegmentationClass')
 
-        txt_path = os.path.join(root, f'ImageSets\Segmentation\{txt_name}')
+        txt_path = os.path.join(root, f'ImageSets/Segmentation/{txt_name}')
         assert os.path.exists(txt_path), "file '{}' does not exist.".format(txt_path)
 
         with open(os.path.join(txt_path), "r") as f:
