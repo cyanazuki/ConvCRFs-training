@@ -17,11 +17,14 @@ from dataset import VOCSegmentation, VOCSegmentationVal
 
 import yaml
 
+wd = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(wd, 'config.yml')
+
 def parse_args():
 
     parser = argparse.ArgumentParser(description="pytorch fcn training")
 
-    with open('config.yml', 'r') as f:
+    with open(config_path, 'r') as f:
         data = yaml.safe_load(f)
         args = data['train_config']
         crf_args = data['crf_config']
@@ -65,7 +68,7 @@ args = parse_args()
 
 def main(args):
 
-    with open('config.yml', 'r') as f:
+    with open(config_path, 'r') as f:
         data = yaml.safe_load(f)
         crf_args = data['crf_config']
     
