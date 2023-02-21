@@ -41,7 +41,7 @@ train_config:
     # aux is whether to use the auxiliary classifier, note that if you utilize auxiliary classifier, the loss
     # function will consider the output of auxiliary classifier
     
-    num_classes: 21
+    num_classes: 20
     # The number of classes in segmentation tasks, for instance, in Pascal VOC 2012, we have 20 classes + 1 
     # background to be segmentated
     
@@ -60,7 +60,7 @@ train_config:
     # ned with the 200 held out imgaes, which means that the number of images will be held out from your traini-
     # ng
     
-    train_with_held_out: True
+    train_with_held_out: False
     # The parameter is to decided whether to train with held out images or not. Note that we only set the param-
     # eter to True, when we are updating the CRFs parameters
     
