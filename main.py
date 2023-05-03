@@ -109,7 +109,7 @@ def main(args):
     num_steps_per_epoch = len(train_loader)
 
     if args.crf:
-        model = create_crf_model(pretrian_path=None, config=crf_args, num_classes=num_classes, freeze_backbone=True, fullscaleFeat=args.fullscaleFeat)
+        model = create_crf_model(pretrain_path=None, config=crf_args, num_classes=num_classes, freeze_backbone=True, fullscaleFeat=args.fullscaleFeat)
     else:
         model = create_model(num_classes=num_classes)
     model.to(device)
