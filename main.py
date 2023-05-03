@@ -157,7 +157,7 @@ def main(args):
         'device': device, 'batch size': batch_size, 'num workers': num_workers, 'learning rate': args.lr, 'loss function': loss,
         'params to optimize': named_parameter, 'optimizer': optimizer, 'scaler': scaler, 'epochs': args.epochs, 
         'weight decay': args.weight_decay, 'lr_scheduler': named, 'start epochs': args.start_epoch, 'aux': args.aux, 
-        'crf': args.crf, 'fullscaleFeat': args.fullscaleFeat, 'held out images': args.held_out_images, 
+        'crf': args.crf, 'held out images': args.held_out_images, # , 'fullscaleFeat': args.fullscaleFeat
         'train with held out': args.train_with_held_out, 'num train images': num_train_images,
         'num val images': num_val_images, 'num steps per epoch': num_steps_per_epoch,
         'train transfrom': train_transforms.trans, 'val transforms': val_transforms.trans,
