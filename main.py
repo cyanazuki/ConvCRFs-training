@@ -34,7 +34,7 @@ def parse_args():
 
     parser.add_argument("--num-classes", default=args['num_classes'], type=int)
     parser.add_argument("--crf", default=args['crf'], type=bool)
-    parser.add_argument("--fullscaleFeat", default=args['fullscaleFeat'])
+    # parser.add_argument("--fullscaleFeat", default=args['fullscaleFeat'])
     parser.add_argument("--held-out-images", default=args['held_out_images'])
     parser.add_argument("--train-with-held-out", default=args['train_with_held_out'], type=bool)
     parser.add_argument("--lr_scheduler", default=args['lr_scheduler'], type=str)
@@ -109,7 +109,7 @@ def main(args):
     num_steps_per_epoch = len(train_loader)
 
     if args.crf:
-        model = create_crf_model(pretrain_path=None, config=crf_args, num_classes=num_classes, freeze_backbone=True, fullscaleFeat=args.fullscaleFeat)
+        model = create_crf_model(pretrain_path=None, config=crf_args, num_classes=num_classes, freeze_backbone=True) # , fullscaleFeat=args.fullscaleFeat
     else:
         model = create_model(num_classes=num_classes)
     model.to(device)
