@@ -7,7 +7,7 @@ from convcrf import GaussCRF
 
 class crf(nn.Module):
     
-    def __init__(self, backbone, config, num_classes=21, shape=(480, 480), use_gpu=False, fullscaleFeat=True):
+    def __init__(self, backbone, config, num_classes=21, shape=(480, 480), use_gpu=False): #, fullscaleFeat=True
         super().__init__()
         
         self.num_classes = num_classes
@@ -17,12 +17,12 @@ class crf(nn.Module):
 
         self.config = config
         
-        self.use_feat = False
-        if fullscaleFeat is not None:
-            self.use_feat = True
+        # self.use_feat = False
+        # if fullscaleFeat is not None:
+        #     self.use_feat = True
         
         self.gausscrf = GaussCRF(conf=self.config, shape=self.shape, nclasses=self.num_classes,
-                    use_gpu= self.use_gpu, fullscaleFeat = self.use_feat)
+                    use_gpu= self.use_gpu) # , fullscaleFeat = self.use_feat
         
     def forward(self, x):
         
@@ -30,12 +30,12 @@ class crf(nn.Module):
          
         unary = self.backbone(x)['out']
         
-        fullscaleFeat = None
-        if self.use_feat:
-            fullscaleFeat = unary
+        # fullscaleFeat = None
+        # if self.use_feat:
+        #     fullscaleFeat = unary
             
         crf_output['backbone'] = unary
-        crf_output['out'] = self.gausscrf(unary, x, fullscaleFeat=fullscaleFeat)
+        crf_output['out'] = self.gausscrf(unary, x) # , fullscaleFeat=fullscaleFeat
         
         return crf_output
 
@@ -50,13 +50,13 @@ def create_model(pretrain_path=None, num_classes=21, drop_rate=0.5):
 
     return model
 
-def create_crf_model(pretrain_path, config, num_classes=21, drop_rate=0.5, freeze_backbone=True, fullscaleFeat=None):
+def create_crf_model(pretrain_path, config, num_classes=21, drop_rate=0.5, freeze_backbone=True): # , fullscaleFeat=None
     backbone = create_model(pretrain_path, num_classes, drop_rate)
     
     if freeze_backbone:
         for params in backbone.parameters():
             params.requires_grad = False
             
-    model = crf(backbone, config, fullscaleFeat=fullscaleFeat)
+    model = crf(backbone, config) # , fullscaleFeat=fullscaleFeat
 
     return model
